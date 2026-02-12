@@ -1,2 +1,2 @@
-# arcat
+# ARCAT
 Atmospheric River CAtegorization Toolkit
