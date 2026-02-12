@@ -147,6 +147,10 @@ We welcome contributions! Please follow these steps:
 This project is licensed under the [Creative Commons License](https://web.archive.org/web/20230202010104/https://creativecommons.org/licenses/by/4.0/).
 
 ---
+## Citation
+
+Cite this software using this [DOI](https://doi.org/10.5281/zenodo.18624779).
+---
 
 ## References
 
