@@ -1,4 +1,3 @@
-````markdown
 # ARCat: Atmospheric River Categorization Toolkit
 
 **ARCat** is a Python package for **categorizing Atmospheric River (AR) events** based on Integrated Vapor Transport (IVT) data. It provides:
@@ -119,7 +118,17 @@ print("Duration per timestep:", duration_event)
 * Works with any **NumPy array**, and can be integrated with **xarray or Dask arrays** for large datasets.
 
 ---
+## Adopting for xarray data
+```python
+final_cat, cum_ivt, ivt_event, duration_event = xr.apply_ufunc(AR_categorization_scheme, 
+                             Ivt_ds['IVT'].as_numpy(),
+                             input_core_dims = [['time']],
+                             output_core_dims = [['time'],['time'],['time'],['time']],
+                             vectorize=True,  # Auto-vectorize over lat/lon
+                             dask='parallelized',  # Enable parallelization using Dask
+                             output_dtypes=[np.int8,np.float32,np.float32, np.int8])
 
+```
 
 ## Contributing
 
@@ -135,11 +144,11 @@ We welcome contributions! Please follow these steps:
 
 ## License
 
-This project is licensed under the MIT License. See `LICENSE` for details.
+This project is licensed under the [Creative Commons License](https://web.archive.org/web/20230202010104/https://creativecommons.org/licenses/by/4.0/).
 
 ---
 
 ## References
 
 * Ralph, F. M., Rutz, J. J., Cordeira, J. M., Dettinger, M., Anderson, M., Reynolds, D., ... & Smallcomb, C. (2019). A scale to characterize the strength and impacts of atmospheric rivers. Bulletin of the American Meteorological Society, 100(2), 269-289.
-* \url{https://ncar.github.io/ARTMIP/intro.html}
+* Visit the [Atmospheric River Tracking Model Intercomparison Project (ARTMIP)](https://ncar.github.io/ARTMIP/intro.html) to follow Atmospheric River community research and publications.

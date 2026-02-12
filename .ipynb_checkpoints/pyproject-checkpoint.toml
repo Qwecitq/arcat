@@ -1,10 +1,28 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "arcat"
 version = "0.1.0"
-description = "Atmospheric River categorization toolkit"
-authors = [{name = "Kwesi T. Quagraine"}]
-dependencies = ["numpy", "xarray", "dask"]
+description = "Atmospheric River Categorization Toolkit"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Kwesi Twentwewa Quagraine", email = "kwsquagraine@gmail.com" }
+]
+keywords = ["atmospheric rivers", "ivt", "weather","extremes", "python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
 
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+dependencies = [
+    "numpy",
+    "xarray",
+    "dask",
+    "numba",
+    "tqdm"
+]
