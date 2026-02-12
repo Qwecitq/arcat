@@ -1,6 +1,9 @@
+README.md
 pyproject.toml
+setup.cfg
 arcat/__init__.py
 arcat/core.py
+arcat/core_v1.py
 arcat/utils.py
 arcat/version.py
 arcat.egg-info/PKG-INFO
