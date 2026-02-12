@@ -1,0 +1,11 @@
+pyproject.toml
+arcat/__init__.py
+arcat/core.py
+arcat/utils.py
+arcat/version.py
+arcat.egg-info/PKG-INFO
+arcat.egg-info/SOURCES.txt
+arcat.egg-info/dependency_links.txt
+arcat.egg-info/requires.txt
+arcat.egg-info/top_level.txt
+tests/test_core.py

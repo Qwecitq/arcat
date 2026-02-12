@@ -1,0 +1,10 @@
+[project]
+name = "arcat"
+version = "0.1.0"
+description = "Atmospheric River categorization toolkit"
+authors = [{name = "Kwesi T. Quagraine"}]
+dependencies = ["numpy", "xarray", "dask"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
